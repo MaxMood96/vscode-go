@@ -5,7 +5,7 @@ ENV GOBIN /gobin
 ENV GOPROXY https://proxy.golang.org
 RUN cd $(mktemp -d) && go get golang.org/x/tools/gopls@latest
 
-FROM node:latest
+FROM node:25.6.0-bookworm
 
 # GO111MODULE=auto
 RUN mkdir /go
